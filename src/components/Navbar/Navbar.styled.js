@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const MainNavWrapper = styled.nav`
   font-size: 18px;
-  background-color: var(--Purple);
+  background-color: var(--Lime);
 `;
 
 const MainNav = styled.div`
@@ -28,12 +28,14 @@ const MainNav = styled.div`
 const NavHeaderWrapper = styled.div`
   display: flex;
   justify-content: space-between;
+  z-index: 2;
+  position: relative;
   padding-top: 1.5em;
   padding-bottom: 1.5em;
 `;
 
 const NavHeader = styled.div`
-  color: var(--Lime);
+  color: var(--Purple);
 `;
 
 const SocialMediaIcons = styled.div`
@@ -41,6 +43,10 @@ const SocialMediaIcons = styled.div`
   justify-content: center;
   padding-top: 1em;
   gap: 1em;
+
+  a {
+    color: var(--Purple);
+  }
 `;
 
 const HamburgerMenuIcon = styled.div`
@@ -63,14 +69,17 @@ const NavLinksWrapper = styled.div`
 `;
 
 const NavLink = styled.a`
+  font-weight: bold;
   text-decoration: none;
-  color: var(--White);
+  color: var(--Purple);
 `;
 
 const HamburgerMenuWrapper = styled.div`
   @media (max-width: 984px) {
+    z-index: 1;
+    top: 0;
     width: 100%;
-    background-color: var(--Purple);
+    background-color: var(--Lime);
     position: fixed;
     height: 100%;
     display: flex;
@@ -80,6 +89,8 @@ const HamburgerMenuWrapper = styled.div`
 
 const HamburgerMenu = styled.div`
   @media (max-width: 984px) {
+    z-index: 2;
+    margin-top: 6em;
     height: 100%;
     width: 100%;
     max-width: 470px;

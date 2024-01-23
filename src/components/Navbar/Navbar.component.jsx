@@ -37,8 +37,12 @@ function Navbar() {
           <S.NavHeader>
             <h4>Benjamin | Fullstack Developer</h4>
             <S.SocialMediaIcons>
-              <FaGithub size={30} />
-              <FaLinkedin size={30} />
+              <a href="https://github.com/BenjaminRasoli" target="_blank">
+                <FaGithub size={30} />
+              </a>
+              <a href="">
+                <FaLinkedin size={30} />
+              </a>
             </S.SocialMediaIcons>
           </S.NavHeader>
 
@@ -47,7 +51,7 @@ function Navbar() {
               toggled={isOpen}
               toggle={setIsOpen}
               size={30}
-              color="var(--White)"
+              color="var(--Purple)"
             />
           </S.HamburgerMenuIcon>
         </S.NavHeaderWrapper>
