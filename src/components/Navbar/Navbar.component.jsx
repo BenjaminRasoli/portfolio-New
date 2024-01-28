@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { S } from "./Navbar.styled";
 import Hamburger from "hamburger-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { navLinks } from "../../constans";
+// import cv from "../../assets/cv.pdf";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -40,7 +42,7 @@ function Navbar() {
               <a href="https://github.com/BenjaminRasoli" target="_blank">
                 <FaGithub size={30} />
               </a>
-              <a href="">
+              <a href="https://github.com/BenjaminRasoli" target="_blank">
                 <FaLinkedin size={30} />
               </a>
             </S.SocialMediaIcons>
@@ -51,27 +53,38 @@ function Navbar() {
               toggled={isOpen}
               toggle={setIsOpen}
               size={30}
-              color="var(--Purple)"
+              color="var(--Teal)"
             />
           </S.HamburgerMenuIcon>
         </S.NavHeaderWrapper>
 
         <S.NavLinksWrapper>
-          <S.NavLink href="">Projects</S.NavLink>
-          <S.NavLink href="">Work & Education</S.NavLink>
-          <S.NavLink href="">About</S.NavLink>
-          <S.NavLink href="">Contact</S.NavLink>
-          <S.NavLink href=""> Download CV </S.NavLink>
+          {navLinks.map((nav) => (
+            <S.NavLink
+              //href={`${nav.id === "CV" ? cv : "#" + nav.id}`}
+              href={`${"#" + nav.id}`}
+              // download={nav.id === "CV" && cv}
+              key={nav.id}
+            >
+              {nav.title}
+            </S.NavLink>
+          ))}
         </S.NavLinksWrapper>
       </S.MainNav>
       {isOpen && (
         <S.HamburgerMenuWrapper>
           <S.HamburgerMenu>
-            <S.NavLink href="">Projects</S.NavLink>
-            <S.NavLink href="">Work & Education</S.NavLink>
-            <S.NavLink href="">About</S.NavLink>
-            <S.NavLink href="">Contact</S.NavLink>
-            <S.NavLink href="">Download CV</S.NavLink>
+            {navLinks.map((nav) => (
+              <S.NavLink
+                onClick={() => setIsOpen(false)}
+                //href={`${nav.id === "CV" ? cv : "#" + nav.id}`}
+                href={`${"#" + nav.id}`}
+                // download={nav.id === "CV" && cv}
+                key={nav.id}
+              >
+                {nav.title}
+              </S.NavLink>
+            ))}
           </S.HamburgerMenu>
         </S.HamburgerMenuWrapper>
       )}

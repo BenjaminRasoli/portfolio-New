@@ -14,10 +14,6 @@ const BannerBackground = () => {
     });
   }, []);
 
-  const particlesLoaded = (container) => {
-    console.log(container);
-  };
-
   const options = useMemo(
     () => ({
       fpsLimit: 120,
@@ -49,10 +45,10 @@ const BannerBackground = () => {
 
       particles: {
         color: {
-          value: "#ccf381",
+          value: "#0f172a",
         },
         links: {
-          color: "#ccf381",
+          color: "#0f172a",
           distance: 350,
           enable: true,
           opacity: 1,
@@ -90,13 +86,7 @@ const BannerBackground = () => {
   );
 
   if (init) {
-    return (
-      <S.ParticlesStyled
-        id="tsparticles"
-        particlesLoaded={particlesLoaded}
-        options={options}
-      />
-    );
+    return <S.ParticlesStyled id="tsparticles" options={options} />;
   }
 };
 

@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 const MainBannerWrapper = styled.div`
-  background-color: var(--Purple);
+  background-color: var(--Teal);
   position: relative;
+
   z-index: -2;
-  padding-top: 5em;
 `;
 
 const MainBanner = styled.div`
@@ -13,6 +13,9 @@ const MainBanner = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-top: 5em;
+  padding-bottom: 5em;
+  color: var(--White);
 
   @media (max-width: 1499px) {
     max-width: 985px;
@@ -31,7 +34,7 @@ const MainBanner = styled.div`
 const BannerMainTextWrapper = styled.div``;
 
 const BannerMainText = styled.h1`
-  color: var(--Lime);
+  color: var(--Navy);
 `;
 
 const BannerSecondText = styled.h3`
@@ -45,17 +48,16 @@ const BannerSecondText = styled.h3`
 `;
 
 const BannerImage = styled.div`
-  padding-top: 3em;
-  padding-bottom: 5em;
   img {
     width: 400px;
-    border: 10px solid var(--Lime);
+    border: 10px solid var(--Navy);
     border-radius: 50%;
   }
 
   @media (max-width: 984px) {
     img {
       width: 300px;
+      margin-top: 3em;
     }
   }
 `;
