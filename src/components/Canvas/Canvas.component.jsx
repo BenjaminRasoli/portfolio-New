@@ -1,7 +1,6 @@
 import React from "react";
 import { useGLTF, Stage, PresentationControls, Decal } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import { MeshDepthMaterial } from "three";
 
 function Model(props) {
   const { scene } = useGLTF("react_logo.glb");

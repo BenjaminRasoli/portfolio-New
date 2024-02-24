@@ -8,17 +8,17 @@ const MainBannerWrapper = styled.div`
 `;
 
 const MainBanner = styled.div`
-  max-width: 1500px;
+  max-width: 1300px;
   margin: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 5em;
-  padding-bottom: 5em;
+  padding-top: 7em;
+  padding-bottom: 7em;
   color: var(--White);
 
   @media (max-width: 1499px) {
-    max-width: 985px;
+    max-width: 850px;
   }
 
   @media (max-width: 984px) {
@@ -33,30 +33,22 @@ const MainBanner = styled.div`
 
 const BannerMainTextWrapper = styled.div``;
 
-const BannerMainText = styled.h1`
-  color: var(--Navy);
-`;
-
-const BannerSecondText = styled.h3`
-  padding-top: 0.5em;
-  max-width: 30em;
-  font-size: 25px;
-
+const BannerMainText = styled.div`
   @media (max-width: 1499px) {
-    padding-top: 4em;
+    padding-top: 5.1em;
   }
 `;
 
 const BannerImage = styled.div`
   img {
-    width: 400px;
-    border: 10px solid var(--Navy);
+    width: 20em;
+    border: 0.7em solid var(--Navy);
     border-radius: 50%;
   }
 
   @media (max-width: 984px) {
     img {
-      width: 300px;
+      width: 15em;
       margin-top: 3em;
     }
   }
@@ -67,6 +59,5 @@ export const S = {
   MainBanner,
   BannerMainTextWrapper,
   BannerMainText,
-  BannerSecondText,
   BannerImage,
 };

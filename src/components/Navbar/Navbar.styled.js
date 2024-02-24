@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const MainNavWrapper = styled.nav`
-  font-size: 18px;
+  font-size: 1.1em;
   background-color: var(--Navy);
   position: sticky;
   z-index: 2;
@@ -12,13 +12,13 @@ const MainNav = styled.div`
   margin: auto;
   display: flex;
   justify-content: space-between;
-  max-width: 1500px;
+  max-width: 1300px;
   @media (max-width: 1499px) {
-    max-width: 985px;
+    max-width: 850px;
+    display: block;
   }
 
   @media (max-width: 984px) {
-    display: block;
     max-width: 470px;
   }
 
@@ -54,7 +54,7 @@ const SocialMediaIcons = styled.div`
 const HamburgerMenuIcon = styled.div`
   display: none;
   z-index: 2;
-  @media (max-width: 984px) {
+  @media (max-width: 1499px) {
     display: flex;
     align-items: center;
   }
@@ -65,7 +65,7 @@ const NavLinksWrapper = styled.div`
   align-items: center;
   gap: 1.6em;
 
-  @media (max-width: 984px) {
+  @media (max-width: 1499px) {
     display: none;
   }
 `;
@@ -77,7 +77,7 @@ const NavLink = styled.a`
 `;
 
 const HamburgerMenuWrapper = styled.div`
-  @media (max-width: 984px) {
+  @media (max-width: 1499px) {
     z-index: 1;
     top: 0;
     width: 100%;
@@ -90,19 +90,24 @@ const HamburgerMenuWrapper = styled.div`
 `;
 
 const HamburgerMenu = styled.div`
-  @media (max-width: 984px) {
+  @media (max-width: 1499px) {
     z-index: 2;
     margin-top: 7.5em;
     height: 100%;
     width: 100%;
-    max-width: 470px;
+    max-width: 850px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
   }
 
+  @media (max-width: 984px) {
+    max-width: 470px;
+  }
+
   @media (max-width: 500px) {
     max-width: 350px;
+    margin-top: 9.5em;
   }
 
   a {

@@ -30,18 +30,22 @@ export const navLinks = [
 
 export const characteristics = [
   {
+    id: 1,
     title: "Skilled",
     image: web,
   },
   {
+    id: 2,
     title: "Committed",
     image: mobile,
   },
   {
+    id: 3,
     title: "Creative",
     image: backend,
   },
   {
+    id: 4,
     title: "Precise",
     image: creator,
   },

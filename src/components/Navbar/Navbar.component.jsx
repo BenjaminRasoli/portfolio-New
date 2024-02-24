@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { S } from "./Navbar.styled";
 import Hamburger from "hamburger-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { navLinks } from "../../constans";
+import { S } from "./Navbar.styled";
 // import cv from "../../assets/cv.pdf";
 
 function Navbar() {
@@ -20,7 +20,7 @@ function Navbar() {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth > 984) {
+      if (window.innerWidth > 1499) {
         setIsOpen(false);
       }
     };
@@ -37,7 +37,7 @@ function Navbar() {
       <S.MainNav>
         <S.NavHeaderWrapper>
           <S.NavHeader>
-            <h4>Benjamin | Fullstack Developer</h4>
+            <h5>Benjamin | Fullstack Developer</h5>
             <S.SocialMediaIcons>
               <a href="https://github.com/BenjaminRasoli" target="_blank">
                 <FaGithub size={30} />

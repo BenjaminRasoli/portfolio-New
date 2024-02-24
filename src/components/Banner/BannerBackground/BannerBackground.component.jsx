@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { initParticlesEngine } from "@tsparticles/react";
-import { S } from "./BannerBackground.styled";
 import { loadSlim } from "@tsparticles/slim";
+import { S } from "./BannerBackground.styled";
 
 const BannerBackground = () => {
   const [init, setInit] = useState(false);
