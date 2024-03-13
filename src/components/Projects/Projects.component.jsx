@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { S } from "./Project.styled";
+import "aos/dist/aos.css";
+import AOS from "aos";
 
 function Projects() {
   const [projects, setProjects] = useState([]);
@@ -7,14 +9,18 @@ function Projects() {
   async function fetchProjects() {
     const url = "https://back-end-server-node-js-5awn.vercel.app/projects";
 
-    const respone = await fetch(url);
-    const allProjects = await respone.json();
-    console.log(allProjects);
-    setProjects(allProjects);
+    try {
+      const respone = await fetch(url);
+      const allProjects = await respone.json();
+      setProjects(allProjects);
+    } catch (error) {
+      console.error("Error fetching works:", error);
+    }
   }
 
   useEffect(() => {
     fetchProjects();
+    AOS.init();
   }, []);
 
   return (
@@ -33,7 +39,11 @@ function Projects() {
         <S.ProjectsWrapper projects={projects}>
           {projects.map((project) => (
             <div key={project.id}>
-              <S.MainImageWrapper>
+              <S.MainImageWrapper
+                data-aos="zoom-in"
+                data-aos-duration="1500"
+                data-aos-once="true"
+              >
                 <img src={project.image} alt={project.name} />
                 <a href={project.link} target="_blank">
                   <S.ImageButtonText>

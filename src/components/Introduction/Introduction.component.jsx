@@ -3,12 +3,15 @@ import { Tilt } from "react-tilt";
 import Model from "../Canvas/Canvas.component";
 import { characteristics } from "../../constans";
 import { S } from "./Introduction.styled";
+import "aos/dist/aos.css";
+import AOS from "aos";
 
 function Introduction() {
   const [isTouchDevice, setIsTouchDevice] = useState(false);
 
   useEffect(() => {
     setIsTouchDevice("ontouchstart" in window);
+    AOS.init();
   }, []);
 
   return (
@@ -47,7 +50,12 @@ function Introduction() {
             <S.TiltCardContainer>
               {characteristics.map((characteristic) => (
                 <Tilt key={characteristic.id}>
-                  <S.TiltCard>
+                  <S.TiltCard
+                    data-aos="fade-right"
+                    data-aos-offset="200"
+                    data-aos-duration="1000"
+                    data-aos-once="true"
+                  >
                     <img src={characteristic.image} alt="web-development" />
                     <h4>{characteristic.title}</h4>
                   </S.TiltCard>

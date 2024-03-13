@@ -23,7 +23,7 @@ const MainProjects = styled.div`
 `;
 
 const ProjectsWrapper = styled.div`
-  margin-top: 3em;
+  margin-top: 5em;
   display: flex;
   flex-wrap: wrap;
   gap: 2em;
