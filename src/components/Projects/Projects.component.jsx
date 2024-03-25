@@ -41,7 +41,7 @@ function Projects() {
             <div key={project.id}>
               <S.MainImageWrapper
                 data-aos="zoom-in"
-                data-aos-duration="1500"
+                data-aos-duration="700"
                 data-aos-once="true"
               >
                 <img src={project.image} alt={project.name} />

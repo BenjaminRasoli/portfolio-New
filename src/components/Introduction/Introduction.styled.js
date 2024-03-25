@@ -75,7 +75,7 @@ const TiltCard = styled.div`
   border-image-slice: 1;
 
   @media (max-width: 1499px) {
-    width: 20em;
+    width: 23em;
   }
 
   img {

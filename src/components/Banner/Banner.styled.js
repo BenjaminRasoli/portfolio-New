@@ -3,7 +3,7 @@ import styled from "styled-components";
 const MainBannerWrapper = styled.div`
   background-color: var(--Teal);
   position: relative;
-
+  padding-top: 8em;
   z-index: -2;
 `;
 

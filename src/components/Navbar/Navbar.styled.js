@@ -49,6 +49,10 @@ const SocialMediaIcons = styled.div`
   a {
     color: var(--Teal);
   }
+
+  a:hover {
+    color: var(--White);
+  }
 `;
 
 const HamburgerMenuIcon = styled.div`
@@ -64,6 +68,10 @@ const NavLinksWrapper = styled.div`
   display: flex;
   align-items: center;
   gap: 1.6em;
+
+  :hover {
+    color: var(--White);
+  }
 
   @media (max-width: 1499px) {
     display: none;
