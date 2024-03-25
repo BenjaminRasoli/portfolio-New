@@ -35,7 +35,7 @@ function Contact() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ formData }),
       };
-      const url = "https://back-end-server-node-js-5awn.vercel.app/sendEmail";
+      const url = `${process.env.REACT_APP_EMAILAPI}`;
       const response = await toast.promise(fetch(url, requestOptions), {
         pending: "Promise is pending",
         success: "Promise resolved 👌",

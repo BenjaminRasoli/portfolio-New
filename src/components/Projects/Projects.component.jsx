@@ -7,7 +7,7 @@ function Projects() {
   const [projects, setProjects] = useState([]);
 
   async function fetchProjects() {
-    const url = "https://back-end-server-node-js-5awn.vercel.app/projects";
+    const url = `${process.env.REACT_APP_PROJECTSAPI}`;
 
     try {
       const respone = await fetch(url);

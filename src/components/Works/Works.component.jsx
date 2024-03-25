@@ -38,7 +38,7 @@ function Experience() {
   const [works, setWorks] = useState([]);
 
   async function fetchWorks() {
-    const url = "https://back-end-server-node-js-5awn.vercel.app/work";
+    const url = `${process.env.REACT_APP_WORKSAPI}`;
 
     try {
       const response = await fetch(url);
